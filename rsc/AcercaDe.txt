@@ -1,0 +1,192 @@
+Integrantes del equipo:
+    Magallon Villanueva Edgar Daniel
+    Maldonado Mendoza Roberto Carlos
+    Bautista Torres Jesus
+    Ochoa Cendejas Victor
+    
+Estructuras del programa a manejar:
+    do while
+    switch_case
+    
+Instrucciones del compilador:
+    Al incio del programa le aparecera un arbol de archivos
+    con varios ya generados.
+    Puede probar a analizar todos estos para que vea como funciona
+    nuestro compilador, hay desde programas sencillos
+    hasta un poco complejos, como el MenuOpciones que maneja 
+    varias cosas ya en conjunto. Como switch dentro swtich
+    asi como do while dentro de do while.
+    
+    Todos estos archivos deberian de funcionar al analizar
+    y compilar, a excepcion del archivo "ValidacionSemantico"
+    ya qye ahi tenemos varias sentencias que marcara error y 
+    habra que modificarlas.
+    
+    0) Acerca de los numeros negativos y exprsiones
+
+	Para crear numeros negativos, no se debe poner el signo "-"
+	ya que este solo es usado para expresiones de resta.
+	El signo a usar es el "!", por lo que una asignacion quedaria asi:
+	int num = !5;
+	Al final, este numero se tomara como negativo y se pasara al codigo
+	c como se debe.
+	Sobre expresiones logicas, se debe usar aqui las palabras reservdas
+	and, not y or.
+
+
+    1) Acerca del Menu Archivo:
+            Este cumple con las funciones basicas
+            de abrir, guardar, cerrar
+            
+    2) Acerca del Menu Codigo:
+            El submenu *"Analizar"*, se encarga 
+            de hacer los analisis lexico, sintactico y semantico
+            y generar el codigo fuente de C.
+            
+            El submenu *"Compilar"* se encarga de tomar el codigo C y compilarlo
+            desde el programa sin necesidad de compilarlo externamente.
+            **Cabe destacar que para que el programa compile se debe tener el 
+            compilador gcc instalado en el sistema**
+            De otra manera tocara compilarlo externamente
+            
+            El submenu *"Ejecutar"* se encargar de ejecutar el archivo C 
+            compilado y abrir la terminal (para en caso de un sistema Linux)
+            o la cmd (para el caso de un sistema Windows)
+            
+            El submenu *"Ver Codigo C"* le permitara ver el codigo C generado
+            sobre el previo analisis que se haya hecho.
+            
+    3) Acerca del Menu Programa:
+    
+            El submenu *Refrescar* se encarga de mostrar en pantalla las 
+            Areas de Texto para los analisis que se hacen.
+                
+            El submenu *Tabla de Simbolos* se encarga de mostrar una pequeña
+            y limitada tabla de simbolos sobre los tokens analizados
+            en el programa. Cabe resaltar que la informacion de la tabla de 
+            simbolos para el analisis semantico se hizo ya en otra clase, y por
+            lo tanto esta tabla se vera limitada, por lo que no pondra
+            cosas como valor, tipo, constantes, etc...
+            
+            
+    4) Acerca del panel *Componentes ocultos*:
+    
+            En este panel se mostraran los componentes que oculte
+            Para ocultar un componente basta con poner el cursor 
+            y dar click sobre los textos "Arbol de archivos", "AL", "AS", "Todo"
+            Y para mostralos de nuevo, basta con hacerlo mismo, pero ahora 
+            en el panel de componetes ocultos
+            Cabe resaltar que el hacer esto varias veces puede llegar a buguear
+            el programa, por lo que no respondera algunos eventos y sera
+            necesario refrescar varias veces o mas rapidamente reinicar el
+            programa
+            
+    5) Sobre el "Arbol de archivos"
+    
+            En esta seccion siempre le mostrara un arbol de archivos
+            que desplegara los archivos de la ruta "ArchivosCompilador"
+            el cual se encuentra en la ruta ~/rsc/ArchivosCompilador
+            
+            Basta con poner un click derecho a una carpeta o archivo
+            para decidir si se quiere crear o eliminar el archivo
+            O en todo caso refrescar el directorio.
+            
+            Ademas, cuando compila por primera vez un archivo c
+            en esa misma ruta le creara una carpeta llamada "out"
+            la cual contendra ahi los archivos c y sus ejecutables.
+            
+              
+    6) Sobre el Programa:
+    
+    
+            En nuestro caso nuestro programa es capaz de:
+            a) Leer datos:
+                Para ello se usa la instruccion "read(nombreVariable)"
+            b) Mostrar datos:
+                Para ello se pueden usar 2 instrucciones:
+                    1) println(id) o println("cadena") o println('caracter') o
+                       println(numeroEntero) o println(numeroFlotante) 
+                    
+                    2) printf("Cadena entre comillas {0} {1}....",id,"cadena"...);
+                       Los "{0} {1}" representan las variables que vienen despues
+                       de la ",", si se pone un indice fuera de rango el programa
+                       simplemente mostrara el indice tal cual "{2}" y no 
+                       generara algun error.
+                       
+            c) Manejo de string (o cadenas), manejo de char (tipo caracter)
+                manejo de int (enteros) y manejo de float (flotantes).
+                
+            d) Manejo de switch case:
+            
+                Para el switch, este solo acepta una variable como
+                parametro, para los case puede ser cualquier valor:
+                    Ejemplo de la estructura:
+                    
+                    switch(nombreVariable) 
+                    {
+                        case nombreVariable{
+                          *Cualquier estructura como switch case, dowhile,
+                        read, print, declaraciones, asignaciones*
+                        *Todo esto las veces que sea*  
+                            }
+                            
+                        case 10{
+                          *Cualquier estructura como switch case, dowhile,
+                        read, print, declaraciones, asignaciones*
+                        *Todo esto las veces que sea*  
+                        }
+                        
+                        case "cadena"{
+                          *Cualquier estructura como switch case, dowhile,
+                        read, print, declaraciones, asignaciones*
+                        *Todo esto las veces que sea*  
+                        }
+                        
+                        default
+                        {
+                              *Cualquier estructura como switch case, dowhile,
+                        read, print, declaraciones, asignaciones*
+                        *Todo esto las veces que sea*  
+                        }    
+                    }
+                    
+               Todo esto cumplieando con sus reglas semanticas obviamente.
+               
+           e) Manejo de do_while:
+           
+                 Para el caso del while, aqui solo es posible manejar
+                 expresiones logicas como:
+                 not x <= y and (x == c or u>=w);
+                 Todo siguiendo la comptabilidad de tipos
+
+                 Estructura:
+                 
+                    do
+                    {
+                        *Cualquier estructura como switch case, dowhile,
+                        read, print, declaraciones, asignaciones*
+                        *Todo esto las veces que sea*        
+                    }
+                    while();
+                    
+           f) Sobre el manejo de variables:
+                    Se valido las variables a nivel
+                    de bloque, por lo que es posible
+                    repetir variables siepre y cuando este en un bloque diferente
+                    
+                    main(){} -> Es un bloque
+                    do{}while() -> Es otro bloque
+
+                    switch(){case{}} -> Este no fue considerado bloque
+                    
+            g) Sobre la generacion de codigo del  do while y switch case:
+            
+                    Se siguieron las reglas establecidad por el profesor
+                    para estructuras, por lo que hicimos uso de las etiquetas
+                    de c y la palabra goto para generar el codigo.
+                    
+                    En el caso del bloque do while, creamos llaves, 
+                    pero solo para validar lo que dijimos anteriormente
+                    lo de la creacion de variables repetidas a nivel de bloque
+                    pero se siguio manejando lo necesario para el uso
+                    del goto y sus etiquetas.

@@ -1,0 +1,38 @@
+class dowhile2
+{
+	main()
+	{
+		int x;
+		int y=1,z=1;
+		println("Ingrese el numero de renglones: ");
+		read(x);
+
+		do
+		{
+			
+			
+			do
+			{
+
+		         printf(" * ");		
+			  y = y+1;
+			} 
+			while(y<=8);
+	
+			do
+			{
+		         printf(" # ");		
+			  z = z+1;
+			} 
+			while(z<=8);
+
+
+			println("");
+			x = x-1;
+			y=1;
+			z=1;
+		}
+		while(x>=1);
+
+	}
+}

@@ -1,0 +1,16 @@
+class HolaMundo
+{
+	main()
+	{
+
+		int hexNum=0xFF, binNum=0b11101, octalNum=0c437;
+
+		string var = "_printf(..)";
+
+		printf("El valor decimal del hexadecimal 0xFF es {0}\n",hexNum);
+		printf("El valor decimal del binario 0b11101 es {0}\n",binNum);
+		printf("El valor decimal del octal 0c437 es {0}\n",octalNum);
+		println("hello mundo con _println()");
+		printf("Hola Mundo con {0}\n",var);	
+	}
+}

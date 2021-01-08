@@ -1,0 +1,62 @@
+class condiciones {
+	main()
+	{
+		int x,y;
+		char continuar;
+
+		println("Lo siguiente es un do_while con condicion _or_");
+		println("Presione una tecla y despues enter para avanzar: ");
+		read(continuar);
+
+		do {
+
+
+			println("Introduce el valor de x: ");
+			read(x);
+			println("Introduce el valor de y: ");
+			read(y);
+		
+		} while ( x <= 10 or y >=100 );
+
+
+		println("Lo siguiente es un do_while con condicion _and_");
+		println("Presione una tecla y despues enter para avanzar: ");
+		read(continuar);
+
+		do {
+
+
+			println("Introduce el valor de x: ");
+			read(x);
+			println("Introduce el valor de y: ");
+			read(y);
+		
+		} while ( x <= 10 and y >=100 );
+
+
+		println("Lo siguiente es do_while para cadenas y con condicones mas largas");
+		println("Para que se repita, el nombre1 debe ser menor al nombre 2");
+		println("Y ademas el nombre3 debe ser igual a Daniel o Magallon");
+		println("O si no bastara con que solo el nombre1 sea igual a Roby para que este se repita.");
+		
+		println("Presione una tecla y despues enter para avanzar: ");
+		read(continuar);
+
+
+		string nombre1,nombre2,nombre3;
+
+		do
+		{
+			println("Dame el nombre 1");
+			read(nombre1);
+			println("Dame el nombre 2");
+			read(nombre2);
+			println("Dame el nombre 3");
+			read(nombre3);
+		}
+		while ( (nombre1 < nombre2 and ( nombre3 == "Dany" or nombre3 == "Eddy" )) 
+			or nombre1=="Roby");
+
+		println("Programa finalizado.");
+	}
+}

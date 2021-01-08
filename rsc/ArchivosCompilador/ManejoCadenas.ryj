@@ -1,0 +1,25 @@
+class cadenas
+{
+	main(){
+	
+		char sig;
+		string name="",aux,nameAux;
+		string concat = "Daniel "+("Magallon "+"Villanueva "+"Edgar ");
+
+		printf("El resultado de la concatenacion es: {0}\n",concat);
+
+		do
+		{
+
+			println("Introduce la cadena");
+			read(aux);
+			nameAux = name;
+			name = nameAux + aux;
+			println("Desea introducir mas? [y/n]");
+			read(sig);
+
+		} while( not sig=='n');
+		
+		printf("Cadenas concatenadas: {0}\n",name);
+	}
+}

@@ -1,0 +1,153 @@
+class MenuOpciones
+{
+	main()
+	{
+	    char seguir;
+	    int opc;
+	    string name;
+	    int dos=2;
+	    int anio;
+	
+  	    println("Dame tu nombre: ");
+	    read(name);
+	    println("Dame tu año de nacimiento: ");
+	    read(anio);
+	    int year = 2021;
+	    int edad = year - anio;
+   	    printf("Tienes o vas a cumplir {0} años de edad\n",edad);
+
+	    do
+	    {
+	  	println("------Operaciones aritmeticas------");	
+	  	println("1) Suma");	
+		println("2) Resta");	
+		println("3) Multiplicacion");	
+		println("4) Division");
+		println("5) Salir");
+		println("Escoja una opcion: ");
+	 	read(opc);
+
+		switch(opc)
+		{
+			case 1
+			{
+			   println("-----Vamos a sumar-----");
+			   float opc2,suma=0;
+			   
+			   do{
+
+				println("Dame un numero o -1 para dejar de sumar: ");
+				read(opc2);
+				
+			
+				switch(opc2)
+				{
+					case !1{  }
+					default{
+					suma = suma + opc2;	
+					}
+				}
+
+
+			   } while( not opc2==!1);
+			
+
+			   printf("La suma de los numeros leidos es: {0}\n",suma);
+			
+
+			   println("\nPresione una tecla y luego enter para continuar\n");
+			   read(seguir);
+			
+			}
+			case dos
+			{
+			   println("----Vamos a restar----");
+
+			   do{ 
+				println("Dame un numero o 0 para dejar de restar");
+				suma = 0;
+				read(opc2);
+
+				switch(opc2){
+					case 0{}
+					default{ 
+						switch(suma)
+						{
+							case 0{ suma = opc2; }
+							default{ suma = suma - opc2; }
+						}
+
+					}
+				}
+			   }
+			   while( not opc2==0);
+
+			   printf("La resta de los numeros leidos es: {0}\n",suma);
+			   println("\nPresione una tecla y luego enter para continuar\n");
+			   read(seguir);
+			}
+
+			case 3{
+				println("-----Vamos a multiplicar----");
+				suma = 1;
+				do
+				{
+					println("Dame un numero o 0 para dejar de multiplicar");
+					read(opc2);
+
+					switch(opc2){
+						case 0{}
+						default{ 
+							suma = suma * opc2;
+						}
+					}
+
+				} while ( not opc2 == 0);
+
+			   printf("El producto de los numeros leidos es: {0}\n",suma);
+			   println("\nPresione una tecla y luego enter para continuar\n");
+			   read(seguir);
+
+			}
+
+			case 4{
+				println("-----Vamos a dividir----");
+				suma = 0;
+				do
+				{
+					println("Dame un numero o 0 para dejar de dividir");
+					read(opc2);
+
+					switch(opc2){
+						case 0{}
+						default{
+							switch(suma){ 
+							
+								case 0{ suma = opc2; }
+								default{
+								suma = suma / opc2;
+								}
+							}
+						}
+					}
+
+				} while ( not opc2 == 0);
+
+			   printf("El cociente de los numeros leidos es: {0}\n",suma);
+			   println("\nPresione una tecla y luego enter para continuar\n");
+			   read(seguir);
+
+			}
+
+			default{
+				println("\nPrograma finalizado\n");
+			}
+		}
+
+		println("\n--------\n");
+
+	    } while( not opc==5);
+
+	    printf("Adios {0} con edad de {1}. Programa finalizado.\n",name,edad);
+	}
+}

@@ -1,0 +1,23 @@
+class main1
+{
+	main()
+	{
+		char x;
+		string y;
+		println("Dame un caracter: ");
+		read(x);
+		println("Dame una cadena: ");
+		read(y);		
+		printf("Introdujo: {0} y {1}\n",x,y);
+		println("Dame una cadena: ");
+		read(y);
+		printf("Introdujo: {0}\n",y);
+		println("Dame un caracter: ");
+		read(x);
+		printf("Introdujo: {0}\n",x);
+		println("Dame un caracter: ");
+		read(x);
+		printf("Introdujo: {0}\n",x);
+	}
+ 
+}

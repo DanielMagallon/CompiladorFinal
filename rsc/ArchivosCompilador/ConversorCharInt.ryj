@@ -1,0 +1,21 @@
+class conversionCharInt
+{
+	main()
+	{
+		int x;
+		char car;
+		char continuar;
+		const char no='n';
+
+		do
+		{
+			println("Ingrese el caracter a convertir: ");
+			read(car);
+			x = car;
+			printf("El valor ascii de {0} es {1}\n",car,x);
+			println("Desea convertir mas? [y/n]");
+			read(continuar);
+		}
+		while( not continuar  == no);
+	}
+}
